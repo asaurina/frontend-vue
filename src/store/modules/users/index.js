@@ -1,6 +1,6 @@
 import axios from '@/config/axios';
 
-const api = 'https://lumen.psa/api/v1';
+const api = 'https://lumen.psa.mx/api/v1';
 
 export default {
   namespaced: true,
