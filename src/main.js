@@ -1,6 +1,9 @@
 import Vue from 'vue';
 import App from './App.vue';
 
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+
 import VueNotify from 'vuejs-notify';
 
 import Loading from 'vue-loading-overlay';
@@ -10,6 +13,8 @@ import router from './router';
 import store from './store';
 
 Vue.config.productionTip = false;
+
+UIkit.use(Icons);
 
 Vue.use(VueNotify);
 

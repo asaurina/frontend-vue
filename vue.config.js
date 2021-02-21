@@ -51,17 +51,8 @@ module.exports = {
           include: /\.index\.vue$/,
         },
         {
-          test: /.*flags.*\.(svg)$/,
-          loader: 'file-loader',
-          options: {
-            name: '[name]-[hash].[ext]',
-            outputPath: 'flags/',
-            publicPath: '/assets/flags/',
-          },
-        },
-        {
-          test: /\.(eot|ttf|woff|woff2)(\?\S*)?$/,
-          loader: 'file-loader',
+          test: /\.less$/,
+          loader: 'less-loader',
         },
       ],
     },

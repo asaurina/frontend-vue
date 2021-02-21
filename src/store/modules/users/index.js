@@ -1,7 +1,5 @@
 import axios from '@/config/axios';
 
-const api = 'https://lumen.psa.mx/api/v1';
-
 export default {
   namespaced: true,
 
@@ -28,7 +26,7 @@ export default {
     fetchUsers({ commit }, payload) {
       return new Promise((resolve, reject) => {
         axios
-          .get(`${api}/users`)
+          .get(`/users`)
           .then((response) => {
             const { data } = response;
 
@@ -44,7 +42,7 @@ export default {
     create({ commit, dispatch }, payload) {
       return new Promise((resolve, reject) => {
         axios
-          .post(`${api}/users`, payload)
+          .post(`/users`, payload)
           .then((response) => {
             const { data } = response;
 
@@ -65,7 +63,7 @@ export default {
     update({ commit }, payload) {
       return new Promise((resolve, reject) => {
         axios
-          .put(`${api}/users/${payload.uuid}`, payload)
+          .put(`users/${payload.uuid}`, payload)
           .then((response) => {
             const { data } = response;
 
@@ -84,7 +82,7 @@ export default {
     softDelete({ commit, dispatch }, uuid) {
       return new Promise((resolve, reject) => {
         axios
-          .delete(`${api}/users/${uuid}`)
+          .delete(`/users/${uuid}`)
           .then((response) => {
             const { data } = response;
 

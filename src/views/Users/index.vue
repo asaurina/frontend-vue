@@ -21,10 +21,7 @@
                 style="border: 1px solid #e5e5e5;"
               >
                 <thead>
-                  <tr class="">
-                    <th class="uk-table-shrink uk-visible@l">
-                      <input class="uk-checkbox" type="checkbox" number />
-                    </th>
+                  <tr>
                     <th class="uk-table-shrink uk-visible@l"></th>
                     <th class="uk-table-expand uk-text-nowrap">Nombre</th>
                     <th class="uk-table-expand uk-text-nowrap uk-text-left uk-text-center@m">Email</th>
@@ -34,9 +31,6 @@
                 </thead>
                 <tbody>
                   <tr v-for="user in users" :key="user.id" class="check-item">
-                    <td class="uk-visible@l">
-                      <input name="id" :value="user.id" class="uk-checkbox" type="checkbox" />
-                    </td>
                     <td class="uk-visible@l">{{ user.id }}</td>
                     <td class="uk-text-break">
                       <span>{{ user.name }}</span>
@@ -47,10 +41,10 @@
                     <td class="uk-text-left uk-text-center@m">
                       {{ user.phone }}
                     </td>
-                    <td class="uk-text-left uk-text-center@m">
+                    <td class="uk-text-left uk-text-center@m uk-text-primary">
                       <a uk-icon="pencil" :uk-tooltip="'Editar'" @click="modal('update', user)"> </a>
                       <a
-                        class="uk-margin-small-left"
+                        class="uk-margin-small-left uk-text-danger"
                         uk-icon="trash"
                         :uk-tooltip="'Eliminar'"
                         @click="remove(user.uuid)"

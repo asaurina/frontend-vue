@@ -7,7 +7,6 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex';
   import Header from './components/Header';
   import Footer from './components/Footer';
 
@@ -22,3 +21,17 @@
     },
   };
 </script>
+<style lang="less">
+  @import '../node_modules/uikit/src/less/uikit.less';
+
+  .uk-search-default .uk-search-input {
+    background: 0 0 !important;
+    border: 1px solid #e5e5e5 !important;
+  }
+  .uk-input,
+  .uk-select,
+  .uk-textarea {
+    background: #fff;
+    border: 1px solid #e5e5e5 !important;
+  }
+</style>
